@@ -1,3 +1,7 @@
+/**
+ * Спринт 3. Финальное задание "Конструктор обеда"
+ */
+
 package ru.practicum.dinner;
 
 import java.util.ArrayList;

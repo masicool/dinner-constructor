@@ -1,3 +1,6 @@
+/**
+ * Класс для реализации функционала генерации комбо-наборов блюд
+ */
 package ru.practicum.dinner;
 
 import java.util.ArrayList;
@@ -35,7 +38,7 @@ public class DishCombo {
             int indexRow = 0; // номер строки в списке комбинаций блюд
             while (indexRow < totalSizeListDishCombo) { // каждый раз проходим по всей длине списка комбинаций
                 for (String dishName : dishNames) {
-                    for (int i = 0; i < countRepeatItem; i++) { // повторяем наименование нужно кол-во раз
+                    for (int i = 0; i < countRepeatItem; i++) { // повторяем наименование нужное кол-во раз
                         listDishCombo.get(indexRow++)[indexCol] = dishName;
                     }
                 }
@@ -61,6 +64,11 @@ public class DishCombo {
         return totalSizeListDishCombo;
     }
 
+    /**
+     * Возврат очередной комбинации (набора) блюд
+     *
+     * @return набор блюд
+     */
     public String[] getNextCombo() {
         if (nextNumberCombo >= totalSizeListDishCombo) {
             nextNumberCombo = 0;
