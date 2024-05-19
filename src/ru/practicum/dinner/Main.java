@@ -109,6 +109,11 @@ public class Main {
             nextItem = scanner.nextLine();
         }
 
+        if (dishNamesOfTypes.isEmpty()) {
+            System.out.println("Вы ни чего не ввели!");
+            return;
+        }
+
         // сформируем все возможные комбинации блюд, передав списки с названиями блюд в конструктор класса
         DishCombo dishCombo = new DishCombo(dishNamesOfTypes);
 

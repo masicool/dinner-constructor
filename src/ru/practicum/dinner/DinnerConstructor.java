@@ -47,10 +47,14 @@ public class DinnerConstructor {
     /**
      * Получение списка всех типов и наименований блюд в виде строк,
      * каждый тип блюда на новой строке (для вывода на печать)
+     * (Чтобы не использовать стандартное преобразование toString() HashMap)
      *
      * @return - возврат списка в виде строки
      */
     public String getAllDishesToStr() {
+        if (dishesList.isEmpty()) {
+            return "Список пуст!";
+        }
         StringBuilder strToReturn = new StringBuilder();
         for (String dishType : dishesList.keySet()) {
             strToReturn.append("\n").append(dishType).append(" = ");
