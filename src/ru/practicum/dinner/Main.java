@@ -18,14 +18,6 @@ public class Main {
         dc = new DinnerConstructor();
         scanner = new Scanner(System.in);
 
-        dc.addDish("Первое", "Борщ");
-        dc.addDish("Первое", "Солянка");
-        dc.addDish("Первое", "Суп гороховый");
-        dc.addDish("Первое", "Суп харчо");
-        dc.addDish("Второе", "Рагу");
-        dc.addDish("Второе", "Солянка мясная");
-        dc.addDish("Второе", "Котлета");
-
         while (true) {
             printMenu();
             String command = scanner.nextLine();
