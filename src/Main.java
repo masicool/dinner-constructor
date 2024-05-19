@@ -2,8 +2,6 @@
  * Спринт 3. Финальное задание "Конструктор обеда"
  */
 
-package ru.practicum.dinner;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;

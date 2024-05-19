@@ -1,7 +1,6 @@
 /**
  * Класс для реализации функционала генерации комбо-наборов блюд
  */
-package ru.practicum.dinner;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,6 @@
 /**
  * Класс для работы с типами и наименованиями блюд
  */
-package ru.practicum.dinner;
 
 import java.util.ArrayList;
 import java.util.HashMap;
