@@ -27,6 +27,7 @@ public class DishCombo {
      */
     public String[] getNextCombo() {
         String[] dishCombo = new String[dishNamesOfTypes.size()]; // массив для хранения набора блюд
+
         for (int i = 0; i < dishNamesOfTypes.size(); i++) {
             ArrayList<String> dishNamesOfType = dishNamesOfTypes.get(i);
             int randomIndex = rnd.nextInt(dishNamesOfType.size());
