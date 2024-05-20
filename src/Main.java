@@ -16,25 +16,29 @@ public class Main {
         dc = new DinnerConstructor();
         scanner = new Scanner(System.in);
 
+        dc.addDish("Первое", "Борщ");
+        dc.addDish("Первое", "Солянка");
+        dc.addDish("Первое", "Суп гороховый");
+        dc.addDish("Первое", "Суп харчо");
+        dc.addDish("Второе", "Рагу");
+        dc.addDish("Второе", "Солянка мясная");
+        dc.addDish("Второе", "Котлета");
+
         while (true) {
             printMenu();
             String command = scanner.nextLine();
 
             switch (command) {
-                case "1":
-                    addNewDish();
-                    break;
-                case "2":
-                    generateDishCombo();
-                    break;
-                case "3":
+                case "1" -> addNewDish();
+                case "2" -> generateDishCombo();
+                case "3" -> {
                     System.out.println("Список всех типов и наименований блюд:");
                     System.out.println(dc.getAllDishesToStr());
-                    break;
-                case "4":
+                }
+                case "4" -> {
                     return;
-                default:
-                    System.out.println("Такой команды нет!");
+                }
+                default -> System.out.println("Такой команды нет!");
             }
         }
     }
@@ -55,7 +59,7 @@ public class Main {
         String dishName = scanner.nextLine();
 
         // проверка правильности ввода наименований
-        if (dishType.isEmpty() || dishName.isEmpty()) {
+        if (dishType.isBlank() || dishName.isBlank()) {
             System.out.println("Название не должно быть пустым. Блюдо не добавлено!");
             return;
         }
@@ -112,18 +116,11 @@ public class Main {
             return;
         }
 
-        // сформируем все возможные комбинации блюд, передав списки с названиями блюд в конструктор класса
+        // создадим экземпляр класса, передав списки с названиями блюд в конструктор
         DishCombo dishCombo = new DishCombo(dishNamesOfTypes);
-
-        // перемешаем список комбинаций блюд в произвольном порядке
-        dishCombo.shuffle();
 
         // выведем заданное пользователем количество комбинаций (наборов) блюд
         for (int i = 1; i <= numberOfCombos; i++) {
-            if (i > dishCombo.getNumberOfCombination()) {
-                System.out.println("Количество наборов только " + dishCombo.getNumberOfCombination());
-                break;
-            }
             System.out.print("Комбо " + i + " ");
             System.out.println(Arrays.toString(dishCombo.getNextCombo()));
         }
