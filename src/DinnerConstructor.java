@@ -1,10 +1,9 @@
-/**
- * Класс для работы с типами и наименованиями блюд
- */
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Класс для работы с типами и наименованиями блюд
+ */
 public class DinnerConstructor {
     private final HashMap<String, ArrayList<String>> dishesList;
 

@@ -1,12 +1,12 @@
-/**
- * Спринт 3. Финальное задание "Конструктор обеда"
- */
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Спринт 3. Финальное задание "Конструктор обеда"
+ */
 public class Main {
 
     static DinnerConstructor dc;

@@ -1,10 +1,9 @@
-/**
- * Класс для реализации функционала генерации комбо-наборов блюд
- */
-
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Класс для реализации функционала генерации комбо-наборов блюд
+ */
 public class DishCombo {
     private final ArrayList<ArrayList<String>> dishNamesOfTypes; // список наименований блюд по типам
     private final Random rnd; // для генерации случайных чисел
